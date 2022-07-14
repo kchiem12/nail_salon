@@ -1,0 +1,74 @@
+/*  Mainly to add animation/transitions to the gallery page */
+
+:root {
+  --enlarged-card-dim: 15vw;
+  --image-dim: 10vw;
+  --orange-color: #fec89a;
+}
+
+.gall-card p {
+  margin: 0;
+  font-size: 1.5vh;
+  opacity: 0;
+}
+
+.gall-card:hover p {
+  opacity: 1;
+  transition: all 600ms;
+}
+
+.gallery-cards {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+}
+
+.nail-img {
+  width: var(--image-dim);
+  border-radius: 5px;
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: var(--image-dim);
+}
+
+.gall-card {
+  display: block;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: var(--image-dim);
+  height: var(--image-dim);
+  padding: 3px;
+  padding-bottom: 2vh !important;
+  background-color: transparent;
+}
+
+.gall-card:hover {
+  background-color: var(--orange-color);
+  transform: scale(1.1);
+  transition: all 600ms;
+}
+
+/* .gal-card {
+    height: 200px;
+    width: 200px;
+    background-color: #FEC89A
+  } 
+  
+  .gal_card-appear{
+    opacity: 1;
+    height: 200px;
+    width: 200px;
+    background-color: #FEC89A
+  }
+  
+  .gal_card-appear-active{
+    opacity: 1;
+    height: 200px;
+    width: 400px;
+    transition: all 3s;
+  } */
