@@ -1,11 +1,15 @@
-import React from 'react';
-import Button from '@mui/material/Button';
-
+import React from "react";
+import Button from "@mui/material/Button";
+import { Link } from "react-router-dom";
 
 const AboutButton = () => {
-    return ( 
-        <Button variant='text' className='button'>About</Button>
-     );
-}
- 
+  return (
+    <Link to={"/about"}>
+      <Button variant="text" className="button">
+        About
+      </Button>
+    </Link>
+  );
+};
+
 export default AboutButton;

@@ -3,6 +3,7 @@ import Stack from '@mui/material/Stack';
 import GalleryButton from './GalleryButton.js';
 import AboutButton from './AboutButton.js';
 import ServicesButton from './ServicesButton.js';
+import { Link } from 'react-router-dom';
 
 const NavigationButtons = () => {
     return ( 

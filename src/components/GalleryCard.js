@@ -25,17 +25,23 @@ const GalleryCard = (props) => {
           clicked ? "gall-card-transition-enter-active permahover" : "hovered"
         }`}
       >
-
-        <CSSTransition in={!isHidden} classNames="cardinfo-transition" timeout={300}>
-        <GalleryCardInfo hidden={isHidden} header="what's good" content="hi"/>
+        <CSSTransition
+          in={!isHidden}
+          classNames="cardinfo-transition"
+          timeout={300}
+        >
+          <GalleryCardInfo
+            hidden={isHidden}
+            header="what's good"
+            content="hi"
+          />
         </CSSTransition>
 
         <img src={props.image} alt="" className="nail-img" />
 
         <div className="card-title">
-        <p>{props.title}</p>
+          <p>{props.title}</p>
         </div>
-        
 
         {/* Add animation to card's extra info */}
         {/* <CSSTransition

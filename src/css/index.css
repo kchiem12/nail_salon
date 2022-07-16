@@ -4,4 +4,9 @@ body {
 
 .button {
   color: #FFB5A7;
+  width: 15vw;
+}
+
+a {
+  text-decoration: none;
 }
