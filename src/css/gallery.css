@@ -6,19 +6,33 @@
   --orange-color: #fec89a;
 }
 
+.card-title {
+  display: block;
+  position: absolute;
+  bottom: 0px;
+  width: var(--image-dim);
+  height: 1.5vh;
+  text-align: center;
+  left: 50%;
+  transform: translate(-50%);
+}
+
 .gall-card p {
-  margin: 0;
+  align-self: center;
+  margin: 0px;
   font-size: 1.5vh;
   opacity: 0;
 }
 
-.gall-card:hover p {
+.hovered:hover p {
   opacity: 1;
   transition: all 600ms;
 }
 
 .gallery-cards {
-  display: block;
+  display: grid;
+  grid-template-columns: 25% 25% 25% 25%;
+  justify-items: center;
   margin-left: auto;
   margin-right: auto;
   width: auto;
@@ -26,16 +40,61 @@
 }
 
 .nail-img {
+  /* flex: none; */
+  display: block;
+  float: left;
   width: var(--image-dim);
+  height: var(--image-dim);
   border-radius: 5px;
-  position: relative;
+  
+  /* position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
-  height: var(--image-dim);
+  transform: translate(-50%, -50%); */
 }
 
+/* .gall-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: var(--image-dim);
+  height: var(--image-dim);
+  padding-bottom: 2vh !important;
+  background-color: transparent;
+} */
+
 .gall-card {
+  display: block;
+  position: relative;
+  border-radius: 5px;
+  cursor: pointer;
+  width: var(--image-dim);
+  height: var(--image-dim);
+  padding-bottom: 2vh !important;
+  background-color: transparent;
+}
+
+.hovered:hover {
+  background-color: var(--orange-color);
+  transform: scale(1.1);
+  transition: all 600ms ease-in-out;
+}
+
+.hovered p {
+  opacity: 0;
+  transition: all 600ms;
+}
+
+.hovered {
+  background-color: transparent;
+  transform: scale(1);
+  transition: all 600ms ease-in-out;
+}
+
+
+.gall-card-transition-enter {
   display: block;
   border-radius: 5px;
   text-align: center;
@@ -47,28 +106,54 @@
   background-color: transparent;
 }
 
-.gall-card:hover {
+.gall-card-transition-enter-active {
+  width: calc(var(--image-dim) + 10vw);
   background-color: var(--orange-color);
-  transform: scale(1.1);
-  transition: all 600ms;
+  transition: all 500ms;
 }
 
-/* .gal-card {
-    height: 200px;
-    width: 200px;
-    background-color: #FEC89A
-  } 
-  
-  .gal_card-appear{
-    opacity: 1;
-    height: 200px;
-    width: 200px;
-    background-color: #FEC89A
-  }
-  
-  .gal_card-appear-active{
-    opacity: 1;
-    height: 200px;
-    width: 400px;
-    transition: all 3s;
-  } */
+.gall-card-transition-enter-done {
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  width: calc(var(--image-dim) + 10vw);
+  height: var(--image-dim);
+  padding: 3px;
+  padding-bottom: 2vh !important;
+  background-color: var(--orange-color);
+}
+
+.permahover {
+  background-color: var(--orange-color);
+  transform: scale(1.1);
+}
+
+.cardinfo-hidden {
+  display: none;
+}
+
+.cardinfo {
+  display: inline-block;
+  position: relative;
+  margin: 0px;
+  opacity: 0;
+  transition: all 200ms linear;
+  width: calc(var(--image-dim) / 2);
+}
+
+.cardinfo-transition-enter {
+  opacity: 0;
+}
+
+.cardinfo-transition-enter-active {
+  opacity: 1;
+  transition: all 300ms;
+}
+
+.cardinfo-transition-enter-done {
+  opacity: 1 !important;
+}
+
+.permahover p {
+  opacity: 1;
+}
