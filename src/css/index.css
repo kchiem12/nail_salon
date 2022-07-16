@@ -1,5 +1,11 @@
+:root {
+  --background-color: #ffcfda;
+  --text-color: #42385d;
+  --footer-color: #b094ae;
+}
+
 body {
-  background-color: pink;
+  background-color: var(--background-color);
 }
 
 .button {
@@ -7,6 +13,28 @@ body {
   width: 15vw;
 }
 
+.credits {
+
+}
+
 a {
   text-decoration: none;
+}
+
+.top-bar {
+  display: block;
+  text-align: center;
+}
+
+.stack {
+  justify-content: center;
+}
+
+.footer {
+  background-color: var(--footer-color);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 1vw;
+  color: var(--text-color);
 }
